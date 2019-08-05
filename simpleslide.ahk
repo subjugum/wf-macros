@@ -1,5 +1,13 @@
-SendMode Input
+/* * * * * Instructions * * * * *
+ * Capslock             Slide attack while pressed
+ * RCtrl + Arrow Keys   Adjusts attack speed
+ * RCtrl + Esc          Close script
+ * LAlt + B             Pause script
+ * LAlt + R             Reload script
+ */
+
 #SingleInstance force
+SendMode Input
 #IfWinActive Warframe
 
 attackDelay := 600
@@ -55,17 +63,17 @@ return
 	timedTT(attackDelay)
 return
 
-; Close script: Ctrl + Esc
+; Close script
 >^Esc::
 	ExitApp
 return
 
-; Pause script: Alt + B
+; Pause script
 <!B::
 	Pause
 return
 
-; Reload script: Alt + R
+; Reload script
 <!R::
 	Reload
 return

@@ -1,10 +1,14 @@
-﻿SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+﻿/* * * * * Instructions * * * * *
+ * Go in front of a console and press Capslock.
+ */
+
 #SingleInstance force
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 
 #IfWinActive, Warframe
 
 CapsLock::
-^CapsLock::
+^CapsLock:: ; To be able to hack while crouching
 	SendInput x
 	Delay(0.13) ; change to 0.005 as host
 	SendInput {Space}
