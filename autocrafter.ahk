@@ -92,11 +92,11 @@ return
 F1::
 	GuiControl, Disable, Start
 	Gui, Submit, Nohide
-	
+
 	CheckCounter := TopLeftChecked + TopRightChecked + MidLeftChecked + MidRightChecked + BotLeftChecked + BotRightChecked
 	LoopCounter = 0
-    Toggle := !Toggle
-	
+	Toggle := !Toggle
+
 	if (CheckCounter = 0)
 	{
 		MsgBox, Select at least one craft box
@@ -104,15 +104,15 @@ F1::
 		GuiControl, Enable, Start
 		return
 	}
-	
+
 	Gui, Add, Text, x10 y140 w90, Crafted:
 	Gui, Add, Text, x100 y140 w80 vLoopCounter, %LoopCounter%
-	
+
 	WinActivate, Warframe
 	Click, 1, 1
 	Sleep, 1000
 	WinGetPos, , , ResW, ResH, A
-	
+
 	if (TopLeftChecked = 1) and (Toggle = 1)
 	{
 		MouseMove, ResW*0.3, ResH*0.325, 20
@@ -171,7 +171,7 @@ F1::
 	Sleep, %TempNumber%
 	LoopCounter++
 	GuiControl,, LoopCounter, %LoopCounter%
-    While ((CheckCounter > 0) and ((InfiniteChecked = 1) or (LoopCounter < Amount)) and (Toggle = 1))
+	While ((CheckCounter > 0) and ((InfiniteChecked = 1) or (LoopCounter < Amount)) and (Toggle = 1))
 	{
 		if (TopLeftChecked = 1)
 		{
@@ -267,14 +267,16 @@ F1::
 		Sleep, %TempNumber2%
 		LoopCounter++
 		GuiControl,, LoopCounter, %LoopCounter%
-    }
+	}
 	Toggle = 0
 return
 
+; LALT + B to pause script
 <!B::
 	Pause
 return
 
+; RCTRL + Esc to close script
 >^Esc::
 	ExitApp
 return
