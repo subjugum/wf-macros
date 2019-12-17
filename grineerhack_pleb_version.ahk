@@ -1,30 +1,31 @@
 ﻿/* * * * * Instructions * * * * *
+ * Made for low fps players
  * Go in front of a console and press Capslock.
  */
 
-#SingleInstance force
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+#SingleInstance force
 
 #IfWinActive, Warframe
 
 CapsLock::
-^CapsLock:: ; To be able to hack while crouching
+^CapsLock::
 	SendInput x
 	Delay(0.345)
 	SendInput {Space}
-	Delay(0.018)
+	Delay(0.036)
 	SendInput {Space}
-	Delay(0.291)
-	SendInput {Space}
-	Delay(0.018)
-	SendInput {Space}
-	Delay(0.255)
+	Delay(0.309)
 	SendInput {Space}
 	Delay(0.018)
 	SendInput {Space}
-	Delay(0.214)
+	Delay(0.25)
 	SendInput {Space}
 	Delay(0.018)
+	SendInput {Space}
+	Delay(0.236)
+	SendInput {Space}
+	Delay(0.036)
 	SendInput {Space}
 return
 
